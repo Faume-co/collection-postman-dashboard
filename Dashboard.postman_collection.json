@@ -1,0 +1,385 @@
+{
+	"info": {
+		"_postman_id": "605bca77-52f9-4b56-8f5d-8f336b237b26",
+		"name": "Dashboard",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3977590"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"{{Login}}\",\n    \"password\": \"{{Password}}\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Domain}}/api/dashboard/login",
+					"host": [
+						"{{Domain}}"
+					],
+					"path": [
+						"api",
+						"dashboard",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Goldenmetrics",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{AccessToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"clients\":[\n      {\n         \"id\":1,\n         \"countries\":[\n            \"FR\"\n         ]\n      }\n   ],\n   \"start\":\"2022-01-01\",\n   \"end\":\"2022-12-31\",\n   \"comparaison\":{\n      \"type\":\"period\",\n         \"start\":\"2022-01-03\",\n         \"end\":\"2022-01-04\"\n   }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Domain}}/api/dashboard/goldenmetrics",
+					"host": [
+						"{{Domain}}"
+					],
+					"path": [
+						"api",
+						"dashboard",
+						"goldenmetrics"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Tradein",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{AccessToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"clients\":[\n      {\n         \"id\":1,\n         \"countries\":[\n            \"FR\"\n         ]\n      },\n      {\n         \"id\":2,\n         \"countries\":[\n            \"FR\"\n         ]\n      },\n      {\n         \"id\":3,\n         \"countries\":[\n            \"FR\"\n         ]\n      }\n   ],\n   \"start\":\"2022-01-01\",\n   \"end\":\"2022-01-02\",\n   \"comparaison\":{\n      \"type\":\"benchmark\"\n   }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Domain}}/api/dashboard/tradein",
+					"host": [
+						"{{Domain}}"
+					],
+					"path": [
+						"api",
+						"dashboard",
+						"tradein"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Finances",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{AccessToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"clients\":[\n      {\n         \"id\":1,\n         \"countries\":[\n            \"FR\"\n         ]\n      },\n      {\n         \"id\":2,\n         \"countries\":[\n            \"FR\"\n         ]\n      },\n      {\n         \"id\":3,\n         \"countries\":[\n            \"FR\"\n         ]\n      }\n   ],\n   \"start\":\"2022-01-01\",\n   \"end\":\"2022-01-02\",\n   \"comparaison\":{\n      \"type\":\"benchmark\"\n   }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Domain}}/api/dashboard/finances",
+					"host": [
+						"{{Domain}}"
+					],
+					"path": [
+						"api",
+						"dashboard",
+						"finances"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Sales",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{AccessToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"clients\":[\n      {\n         \"id\":1,\n         \"countries\":[\n            \"FR\"\n         ]\n      },\n      {\n         \"id\":2,\n         \"countries\":[\n            \"FR\"\n         ]\n      },\n      {\n         \"id\":3,\n         \"countries\":[\n            \"FR\"\n         ]\n      }\n   ],\n   \"start\":\"2022-01-01\",\n   \"end\":\"2022-01-02\",\n   \"comparaison\":{\n      \"type\":\"benchmark\"\n   }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Domain}}/api/dashboard/sales",
+					"host": [
+						"{{Domain}}"
+					],
+					"path": [
+						"api",
+						"dashboard",
+						"sales"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "doc",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Domain}}/api/doc/dashboard",
+					"host": [
+						"{{Domain}}"
+					],
+					"path": [
+						"api",
+						"doc",
+						"dashboard"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "clients",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{AccessToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Domain}}/api/dashboard/clients?locale=en_GB",
+					"host": [
+						"{{Domain}}"
+					],
+					"path": [
+						"api",
+						"dashboard",
+						"clients"
+					],
+					"query": [
+						{
+							"key": "locale",
+							"value": "en_GB"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "me",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{AccessToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Domain}}/api/dashboard/me",
+					"host": [
+						"{{Domain}}"
+					],
+					"path": [
+						"api",
+						"dashboard",
+						"me"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "wordings",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Domain}}/api/dashboard/wordings",
+					"host": [
+						"{{Domain}}"
+					],
+					"path": [
+						"api",
+						"dashboard",
+						"wordings"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					"pm.sendRequest({",
+					"    url: pm.collectionVariables.get(\"Domain\")+\"/api/dashboard/login\",",
+					"    method: 'POST',",
+					"    header: {",
+					"        'content-type': 'application/json'",
+					"    },",
+					"    body: {",
+					"        mode: 'raw',",
+					"        raw: JSON.stringify({\"email\": pm.collectionVariables.get(\"Login\"),\"password\": pm.collectionVariables.get(\"Password\")})",
+					"    }",
+					"}, (err, res) => pm.collectionVariables.set(\"AccessToken\", res.json().token))"
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "Domain",
+			"value": "http://admin.localhost"
+		},
+		{
+			"key": "AccessToken",
+			"value": "xxxxx",
+			"type": "string"
+		},
+		{
+			"key": "Login",
+			"value": "user@faume.co",
+			"type": "string"
+		},
+		{
+			"key": "Password",
+			"value": "xxxxx",
+			"type": "string"
+		}
+	]
+}
